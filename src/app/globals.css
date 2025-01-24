@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Color Scheme */
+  --color-primary: #353535;
+  --color-cream: #FFFAEC;
+  --color-beige: #F5ECD5;
+  --color-teal: #578E7E;
+  --color-dark-gray: #3D3D3D;
+  --color-off-white: #FAF9FF;
+  --color-pink: #FF5789;
+  --color-light-pink: #FFC6D7;
+  --color-gray-beige: #CDC7B5;
+  
+  /* System Colors */
+  --background: var(--color-cream);
+  --foreground: var(--color-primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
