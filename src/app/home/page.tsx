@@ -19,19 +19,19 @@ export default function HomePage() {
         <StatCard
           title="Revenue"
           value="$3690"
-          icon={<Icon name="arrow-up" size={20} className="text-[#CCCCCC]" />}
+          icon={<Icon name="arrow-up" size={20} color={colors.chart.revenue} />}
           chart={<BarChart data={revenueData} color={colors.chart.revenue} />}
         />
         <StatCard
           title="Expenses"
           value="$1200.5"
-          icon={<Icon name="arrow-down" size={20} className="text-[#CCCCCC]" />}
+          icon={<Icon name="arrow-down" size={20} color={colors.chart.expenses} />}
           chart={<BarChart data={expensesData} color={colors.chart.expenses} />}
         />
         <StatCard
           title="Sales"
           value="4389"
-          icon={<Icon name="sales" size={20} className="text-[#CCCCCC]" />}
+          icon={<Icon name="sales" size={20} color={colors.chart.expenses} />}
           chart={<LineChart data={salesData} color={colors.chart.sales} />}
         />
       </div>
