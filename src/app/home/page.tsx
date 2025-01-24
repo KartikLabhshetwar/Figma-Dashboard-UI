@@ -31,7 +31,7 @@ export default function HomePage() {
         <StatCard
           title="Sales"
           value="4389"
-          icon={<Icon name="sales" size={16} color={colors.chart.expenses} />}
+          icon={<Icon name="Sales" size={16} color={colors.chart.expenses} />}
           chart={<LineChart data={salesData} color={colors.chart.sales} />}
         />
       </div>

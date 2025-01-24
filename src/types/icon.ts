@@ -2,11 +2,11 @@ export const ICON_NAMES = {
     'arrow-down': 'arrow-down',
     'arrow-up': 'arrow-up',
     'chart': 'chart',
-    'customers': 'Customers',
+    'Customers': 'Customers',
     'home': 'home',
     'setting': 'setting',
     'notification': 'notification',
-    'sales': 'Sales',
+    'Sales': 'Sales',
   } as const;
   
   export type IconName = keyof typeof ICON_NAMES;
