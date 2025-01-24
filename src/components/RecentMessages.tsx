@@ -2,7 +2,7 @@ import MessageCard from './MessageCard';
 
 const RecentMessages = () => {
   return (
-    <div className="h-[264px] bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.05)] overflow-hidden flex flex-col gap-4">
+    <div className="bg-white rounded-[20px] divide-y divide-gray-50">
       <MessageCard
         name="Guy Hawkins"
         message="How can I return package?"

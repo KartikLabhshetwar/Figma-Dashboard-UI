@@ -15,15 +15,15 @@ const Header = () => {
   };
 
   return (
-    <div className="flex items-center justify-between h-[88px] px-8 border-b border-[#F5ECD5] bg-[#FFFAEC]">
-      <div className="relative bg-[#FFFAEC]">
-        <div className="flex items-center gap-2 ">
+    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between h-auto sm:h-[88px] p-4 sm:px-8 border-b border-[#F5ECD5] bg-[#FFFAEC] gap-4 sm:gap-0">
+      <div className="relative bg-[#FFFAEC] w-full sm:w-auto">
+        <div className="flex items-center gap-2">
           <span className="text-sm font-medium text-[#353535]">Sort:</span>
           <button
-            className="flex items-center justify-between gap-2 px-6 py-3 bg-white/50 rounded-full border border-gray-100 w-[180px] h-[48px]"
+            className="flex items-center justify-between gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white/50 rounded-full border border-gray-100 w-full sm:w-[180px] h-[40px] sm:h-[48px]"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <span className="text-[#CCCCCC] text-base">{selectedPeriod}</span>
+            <span className="text-[#CCCCCC] text-sm sm:text-base">{selectedPeriod}</span>
             <FontAwesomeIcon 
               icon={faChevronDown}
               className={`text-[#CCCCCC] w-3 h-3 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
@@ -32,7 +32,7 @@ const Header = () => {
         </div>
 
         {isOpen && (
-          <div className="absolute top-full left-0 mt-2 w-[180px] bg-white rounded-xl shadow-lg border border-[#F5ECD5] py-2 z-10">
+          <div className="absolute top-full left-0 mt-2 w-full sm:w-[180px] bg-white rounded-xl shadow-lg border border-[#F5ECD5] py-2 z-10">
             {['Last week', 'Last month', 'Last year'].map((period) => (
               <button
                 key={period}
@@ -48,7 +48,7 @@ const Header = () => {
         )}
       </div>
 
-      <div className="flex items-center gap-8">
+      <div className="flex items-center gap-4 sm:gap-8 w-full sm:w-auto justify-between sm:justify-end">
         <button className="relative">
           <Icon 
             name="notification" 
@@ -59,7 +59,7 @@ const Header = () => {
         </button>
 
         <div className="flex items-center gap-4">
-          <div className="relative w-10 h-10">
+          <div className="relative w-8 sm:w-10 h-8 sm:h-10">
             <div className="absolute -top-[2px] -right-[2px] w-3 h-3 bg-[#00FD48] rounded-full border-2 border-white z-10" />
             <div className="w-10 h-10 rounded-full overflow-hidden">
               <Image

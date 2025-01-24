@@ -12,35 +12,35 @@ interface MessageCardProps {
 
 const MessageCard = ({ name, message, status, time, avatar }: MessageCardProps) => {
   return (
-    <div className="flex items-center h-[88px] px-6 hover:bg-[#FFFAEC] transition-colors cursor-pointer">
-      <div className="w-[200px] flex items-center gap-4">
-        <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+    <div className="flex flex-col sm:flex-row items-start sm:items-center border-b border-gray-50 last:border-b-0 hover:bg-[#FFFAEC] transition-colors cursor-pointer">
+      <div className="flex items-center gap-3 p-4 sm:p-6 w-full sm:w-[280px] sm:border-r border-gray-50">
+        <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden flex-shrink-0">
           <Image
-            src={avatar || '/placeholder-avatar.jpg'} // Provide a default avatar
+            src={avatar || '/placeholder-avatar.jpg'}
             alt={name}
             fill
             className="object-cover"
-            sizes="40px"
+            sizes="(max-width: 640px) 36px, 40px"
           />
         </div>
-        <h3 className="text-[#1A1A1A] text-base font-medium pl-4">{name}</h3>
+        <h3 className="text-[#1A1A1A] text-sm sm:text-base font-medium">{name}</h3>
       </div>
       
-      <div className="flex-1 min-w-0 ml-40">
-        <p className="text-black text-sm truncate">{message}</p>
-      </div>
-      
-      <div className="w-[200px] flex items-center justify-between">
-        <span className={`text-sm ${
-          status === 'Pending' 
-            ? 'text-[#CCCCCC]' 
-            : 'text-[#578E7E]'
-        }`}>
-          {status}
-        </span>
-      </div>
-      <div className='pr-4'>
-        <span className="text-[#CCCCCC] text-sm">{time}</span>
+      <div className="flex flex-1 items-center justify-between px-4 pb-4 sm:p-6 w-full">
+        <p className="text-[#353535] text-sm line-clamp-1 max-w-[200px] sm:max-w-none">
+          {message}
+        </p>
+        
+        <div className="flex items-center gap-6">
+          <span className={`text-sm whitespace-nowrap min-w-[70px] text-center ${
+            status === 'Pending' 
+              ? 'text-[#CCCCCC]' 
+              : 'text-[#578E7E]'
+          }`}>
+            {status}
+          </span>
+          <span className="text-[#CCCCCC] text-sm whitespace-nowrap ml-40">{time}</span>
+        </div>
       </div>
     </div>
   );

@@ -8,30 +8,31 @@ interface LineChartProps {
 export default function LineChart({ data, color = '#1A1A1A' }: LineChartProps) {
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <RechartsLineChart data={data} margin={{ top: 20, right: 40, bottom: 20, left: 20 }}>
+      <RechartsLineChart data={data} margin={{ top: 10, right: 10, bottom: 10, left: 0 }}>
         <XAxis 
           dataKey="label" 
           axisLine={false} 
           tickLine={false} 
-          tick={{ fontSize: 12, fill: '#CCCCCC' }}
-          dy={10}
+          tick={{ fontSize: 10, fill: '#CCCCCC' }}
+          dy={5}
+          interval="preserveStartEnd"
         />
         <YAxis
           axisLine={false}
           tickLine={false}
-          tick={{ fontSize: 12, fill: '#CCCCCC' }}
+          tick={{ fontSize: 10, fill: '#CCCCCC' }}
           tickFormatter={(value) => `${value/1000}K`}
           ticks={[1000, 2000, 3000, 4000]}
           domain={[0, 4000]}
           orientation="left"
           dx={-5}
-          width={35}
+          width={25}
         />
         <Line
           type="monotone"
           dataKey="value"
           stroke={color}
-          strokeWidth={2.5}
+          strokeWidth={2}
           dot={false}
           fill="none"
         />
