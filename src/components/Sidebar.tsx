@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Icon from '@/components/Icon';
+import { IconName } from '@/types/icon';
 
 interface NavigationItem {
   name: string;
@@ -47,8 +48,7 @@ const Sidebar = () => {
                 <div className="absolute left-[-2rem] top-0 h-full w-[5px] bg-[#FFFAEC] rounded-r" />
               )}
               <Icon 
-                name={item.iconName}
-                variant="linear"
+                name={item.iconName as IconName}
                 size={24}
                 className={`transition-colors ${isActive ? 'text-[#FFFAEC]' : 'text-[#CDC7B5] group-hover:text-[#FFFAEC]'}`}
               />

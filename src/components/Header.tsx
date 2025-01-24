@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Icon from './Icon';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedPeriod, setSelectedPeriod] = useState('Last week');
@@ -43,9 +42,6 @@ const Header = () => {
                 onClick={() => handlePeriodSelect(period)}
               >
                 {period}
-                {selectedPeriod === period && (
-                  <Icon name="tick" variant="linear" size={16} className="text-[#578E7E]" />
-                )}
               </button>
             ))}
           </div>
@@ -56,7 +52,6 @@ const Header = () => {
         <button className="relative">
           <Icon 
             name="notification" 
-            variant="linear" 
             size={24} 
             className="text-[#353535]" 
           />
