@@ -13,7 +13,7 @@ The main challenges included:
 - Ensuring consistent styling of SVG icons across different components
 - Creating smooth hover animations while maintaining performance
 
-These challenges were overcome through careful component composition, responsive design practices, and optimization of state management.
+These challenges were overcome through careful component composition, and responsive design practices.
 
 ## Tech Stack
 
